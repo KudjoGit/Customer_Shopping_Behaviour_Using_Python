@@ -1,0 +1,2 @@
+duplicates = df.duplicated().sum()
+print(f"\n📌 Number of duplicate rows: {duplicates}")

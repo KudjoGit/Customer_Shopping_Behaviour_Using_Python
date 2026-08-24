@@ -1,0 +1,20 @@
+if 'Age' in df.columns:
+    plt.figure(figsize=(12, 5))
+    
+    # Histogram
+    plt.subplot(1, 2, 1)
+    df['Age'].hist(bins=20, edgecolor='black', color='skyblue')
+    plt.title('Age Distribution')
+    plt.xlabel('Age')
+    plt.ylabel('Frequency')
+    plt.grid(True, alpha=0.3)
+    
+    # Box plot
+    plt.subplot(1, 2, 2)
+    df.boxplot(column='Age', vert=False)
+    plt.title('Age Box Plot')
+    plt.xlabel('Age')
+    plt.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    plt.show()

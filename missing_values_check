@@ -1,0 +1,4 @@
+print("\n🔍 Missing Values Check:")
+print("-" * 50)
+missing_values = df.isnull().sum()
+print(missing_values[missing_values > 0] if any(missing_values > 0) else "No missing values found!")

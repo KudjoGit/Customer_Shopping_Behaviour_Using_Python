@@ -1,0 +1,29 @@
+# Create a dashboard with multiple plots
+fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+
+# Plot 1: Age Distribution
+axes[0, 0].hist(df['Age'], bins=20, color='skyblue', edgecolor='black')
+axes[0, 0].set_title('Age Distribution')
+axes[0, 0].set_xlabel('Age')
+axes[0, 0].set_ylabel('Count')
+
+# Plot 2: Purchase Amount Distribution
+axes[0, 1].hist(df['Purchase Amount (USD)'], bins=20, color='lightgreen', edgecolor='black')
+axes[0, 1].set_title('Purchase Amount Distribution')
+axes[0, 1].set_xlabel('Purchase Amount ($)')
+axes[0, 1].set_ylabel('Count')
+
+# Plot 3: Category Distribution
+df['Category'].value_counts().plot(kind='bar', ax=axes[1, 0], color='coral')
+axes[1, 0].set_title('Category Distribution')
+axes[1, 0].set_xlabel('Category')
+axes[1, 0].set_ylabel('Count')
+axes[1, 0].tick_params(axis='x', rotation=45)
+
+# Plot 4: Gender Distribution
+df['Gender'].value_counts().plot(kind='pie', ax=axes[1, 1], autopct='%1.1f%%')
+axes[1, 1].set_title('Gender Distribution')
+
+plt.tight_layout()
+plt.savefig('images/project_overview.png', dpi=300, bbox_inches='tight')
+plt.show()

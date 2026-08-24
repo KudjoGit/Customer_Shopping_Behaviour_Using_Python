@@ -1,0 +1,13 @@
+images/
+├── 01_age_distribution.png          # Age histogram
+├── 02_purchase_amount.png           # Purchase amount distribution
+├── 03_category_analysis.png         # Category analysis
+├── 04_gender_analysis.png           # Gender analysis
+├── 05_location_analysis.png         # Location analysis
+├── 06_correlation_matrix.png        # Correlation heatmap
+├── 07_top_items.png                 # Top purchased items
+├── 08_color_preferences.png         # Color preferences
+├── 09_project_overview.png          # Overview dashboard
+├── 10_git_repo_screenshot.png       # GitHub repository
+├── 11_jupyter_screenshot.png        # Jupyter notebook
+└── 12_data_sample.png               # Data sample

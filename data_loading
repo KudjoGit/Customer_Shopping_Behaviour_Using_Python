@@ -1,0 +1,21 @@
+# Define the file path
+file_path = r"C:\Users\Kujoo\Desktop\DATA_SCIENCE_GITHUB_PROJECT_2026\customer behaviour dataset\customer_behaviour_dataset_cleaned.csv"
+
+# Load the dataset with semicolon delimiter
+try:
+    df = pd.read_csv(file_path, delimiter=';')
+    print("✅ Dataset loaded successfully!")
+    print(f"📊 Shape: {df.shape[0]} rows × {df.shape[1]} columns")
+except FileNotFoundError:
+    print("❌ File not found! Please check the file path.")
+    print("Please update the file_path variable with your actual file path.")
+    # For demonstration, let's create a sample if file doesn't exist
+    print("\nCreating sample dataset for demonstration...")
+    df = pd.DataFrame({
+        'Customer ID': range(1, 11),
+        'Age': [25, 34, 45, 22, 31, 42, 28, 53, 36, 29],
+        'Gender': ['Male', 'Female', 'Male', 'Female', 'Male', 'Female', 'Female', 'Male', 'Female', 'Male'],
+        'Item Purchased': ['Shoes', 'Dress', 'Jacket', 'Sandals', 'Sunglasses', 'Blouse', 'Jeans', 'Coat', 'Dress', 'T-shirt'],
+        'Category': ['Footwear', 'Clothing', 'Outerwear', 'Footwear', 'Accessories', 'Clothing', 'Clothing', 'Outerwear', 'Clothing', 'Clothing'],
+        'Purchase Amount (USD)': [120, 85, 150, 45, 60, 95, 70, 200, 110, 55]
+    })
